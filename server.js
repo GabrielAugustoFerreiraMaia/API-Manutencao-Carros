@@ -1,5 +1,6 @@
 // server.js
 const express = require('express');
+const cors = require('cors');
 const dotenv = require('dotenv');
 dotenv.config();
 
@@ -9,6 +10,7 @@ const abastecimentoRoutes = require('./routes/abastecimento');
 const simulacaoRoutes = require('./routes/simulucao');
 
 const app = express();
+app.use(cors());
 app.use(express.json());
 
 // Rotas
